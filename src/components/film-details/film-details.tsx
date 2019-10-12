@@ -2,12 +2,12 @@ import React, { useEffect, useState, Suspense, lazy } from "react";
 import { loadingUI } from "../../containers/default-layouts/default-layouts";
 import { useParams } from "react-router-dom";
 import FilmController from "../../services/film-controller";
+import ErrorBoundary from "../error-boundaries";
 
 const OpeningCrawl = lazy(() => import("./crawl"));
 const Characters = lazy(() => import("./characters"));
 
 const DetailsView = props => {
-
   return props.film ? (
     <>
       <div className="mb-6">
@@ -64,7 +64,9 @@ function FilmDetails(props) {
 
   return (
     <div className="w-full h-full bg-black p-6">
-      {loading ? loadingUI() : <DetailsView film={film} />}
+      <ErrorBoundary>
+        {loading ? loadingUI() : <DetailsView film={film} />}
+      </ErrorBoundary>
     </div>
   );
 }

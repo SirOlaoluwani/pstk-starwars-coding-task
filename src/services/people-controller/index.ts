@@ -20,9 +20,9 @@ export default function PeopleController() {
   };
 
   this.getPerson = (id: string) => {
-    this.endpoint = `${this.endpoint}/${id}`;
-    return useAPIFetch({ method: this.method, endpoint: this.endpoint }).then(
-      responseHandler
-    );
+    return useAPIFetch({
+      method: this.method,
+      endpoint: `${this.endpoint}/${id}`
+    }).then(responseHandler);
   };
 }

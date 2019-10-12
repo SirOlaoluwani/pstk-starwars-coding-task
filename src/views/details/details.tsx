@@ -3,7 +3,7 @@ import { loadingUI } from "../../containers/default-layouts/default-layouts";
 
 const FilmDetails = lazy(() => import("../../components/film-details"));
 
-function MovieDetails(props) {
+function MovieDetails() {
   return (
     <div className="w-full min-h-screen flex justify-center">
       <Suspense fallback={loadingUI()}>

@@ -61,15 +61,15 @@ const columns = [
 ];
 
 const TableFooter = currentPageData => {
-  console.log(currentPageData);
+
   const calculateHeight = currentPageData => {
     let cm = currentPageData.reduce((prev, current) => ({
       height: parseInt(prev.height) + parseInt(current.height)
     }));
     let inches = (cm.height * 0.393701).toFixed(0);
     let feet = Math.floor(parseInt(inches) / 12);
-    
-    return { cm: cm.height, inches, feet }
+
+    return { cm: cm.height, inches, feet };
   };
 
   let height =
@@ -102,6 +102,7 @@ const TableFooter = currentPageData => {
 export default function Characters(props) {
   const [loading, setLoading] = React.useState(false);
   const [people, setPeople] = React.useState([]);
+  const { characters } = props;
 
   React.useEffect(() => {
     const fetchData = async () => {
@@ -114,8 +115,6 @@ export default function Characters(props) {
     };
     fetchData();
   }, []);
-
-  const { characters } = props;
 
   return (
     <div className="w-full">

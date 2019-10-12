@@ -1,11 +1,9 @@
 import React, { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
-import { Layout, Input } from "antd";
+import { Layout } from "antd";
 import { loadingUI } from "./default-layouts";
 
-const { Search } = Input;
 const { Header } = Layout;
-
 const LogoIcon = lazy(() => import("../../assets/images/icons/Logo"));
 
 export default function DefaultHeader() {

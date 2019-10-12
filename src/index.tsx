@@ -1,24 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from "react-redux";
 import App from './app/App';
 import * as serviceWorker from './serviceWorker';
 import "./assets/css/style.tailwind.compiled.css";
-import { store } from "./state-mgt/store";
-import { loadFilms } from './state-mgt/actions';
-
-declare global {
-    interface Window { store: any; loadFilms: any }
-}
-
-
-window.store = store;
-window.loadFilms = loadFilms;
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+    <App />,
   document.getElementById("root")
 );
 
