@@ -4,7 +4,7 @@ Built with React JS.
 
 ## Live Demo
 
-(olaoluwanis-paystck-coding-test.netlify.com)[https://olaoluwanis-paystck-coding-test.netlify.com]
+[olaoluwanis-paystck-coding-test.netlify.com](https://olaoluwanis-paystck-coding-test.netlify.com)
 
 ## Install
 
@@ -28,4 +28,4 @@ Open http://localhost:3000
 
 ## Deployment Server
 
-[Netlify](https://www.netlify.com/
+[Netlify](https://www.netlify.com/)
