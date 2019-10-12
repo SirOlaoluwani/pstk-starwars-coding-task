@@ -18,6 +18,6 @@ Open http://localhost:3000
 - Typescript
 - [The Platform](https://github.com/jaredpalmer/the-platform)
 
-### Data 
+## Data 
 
 [Swapi](https://swapi.co/api/films)
