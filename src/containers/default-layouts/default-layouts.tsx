@@ -15,7 +15,7 @@ export default function DefaultLayout() {
       <Suspense fallback={loadingUI()}>
         <Header />
       </Suspense>
-      <Content className="h-screen pt-20 pl-10 pr-10 pb-20">
+      <Content className="content-container">
         <Suspense fallback={loadingUI()}>
           <Switch>
             {clientRoutes.map((route, index) => {

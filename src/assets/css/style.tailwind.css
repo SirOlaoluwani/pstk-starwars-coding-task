@@ -3,6 +3,8 @@
 
 @import "~antd/dist/antd.css";
 
+$black: #0d0703;
+
 html,
 body {
   @apply bg-black-light;
@@ -35,14 +37,63 @@ h5 {
   color: black;
 }
 
+.content-container {
+  @apply h-screen pt-20 pl-10 pr-10 pb-20;
+}
+
 .movie-info {
   @apply flex w-full m-2 justify-start;
 
   div {
     @apply m-3;
-    
+
     :first-child {
+      @apply ml-0;
+    }
+  }
+}
+
+.table-header {
+  @apply flex justify-between;
+
+  .table-header-section-2 {
+    @apply flex justify-end
+
+    div {
+      width: 150px;
+    }
+  }
+}
+
+.ant-table-thead {
+  tr {
+    th {
+      background: $black !important;
+    }
+  }
+}
+
+@screen sm {
+  .movie-info {
+    @apply ml-0;
+    div {
+      :first-child {
         @apply ml-0;
+      }
+    }
+  }
+
+  .content-container {
+    @apply pt-20 pl-0 pr-0 pb-20;
+  }
+
+  .table-header {
+    .table-header-section-2 {
+      @apply flex justify-between;
+
+      div {
+        @apply m-auto;
+      }
     }
   }
 }
@@ -89,9 +140,9 @@ h5 {
     text-align: center;
 
     h1 {
-    margin: 0 0 100px;
-    text-transform: uppercase;
-  }
+      margin: 0 0 100px;
+      text-transform: uppercase;
+    }
   }
 }
 

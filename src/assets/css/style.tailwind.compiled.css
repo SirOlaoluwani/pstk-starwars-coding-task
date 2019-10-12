@@ -622,6 +622,14 @@ h5 {
   color: black;
 }
 
+.content-container {
+  height: 100vh;
+  padding-top: 5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-bottom: 5rem;
+}
+
 .movie-info {
   display: flex;
   width: 100%;
@@ -636,6 +644,32 @@ h5 {
 .movie-info div :first-child {
       margin-left: 0;
     }
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-header .table-header-section-2 {
+    display: flex;
+    justify-content: flex-end
+  }
+
+@media (max-width: 639px) {
+  .movie-info {
+    margin-left: 0;
+  }
+      .movie-info div :first-child {
+        margin-left: 0;
+      }
+
+  .content-container {
+    padding-top: 5rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 5rem;
+  }
+}
 
 .opening-crawl-container {
   background: url("../images/bg/star-wars-sky.jpeg");
