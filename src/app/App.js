@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from "react";
-import { HashRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import { loadingUI } from "../containers/default-layouts/default-layouts";
 
 const DefaultLayout = lazy(() =>
@@ -8,11 +8,11 @@ const DefaultLayout = lazy(() =>
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Suspense fallback={loadingUI()}>
         <Route path="/" name="Home" component={DefaultLayout} />
       </Suspense>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
