@@ -4,8 +4,8 @@ Built with React JS.
 
 ## Install
 
-###`npm install`
-###`yarn start`
+### `npm install`
+### `yarn start`
 
 Open http://localhost:3000
 
