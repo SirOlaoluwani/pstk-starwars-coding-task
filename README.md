@@ -2,6 +2,10 @@ This is a small app to display all the available starwars movies and their detai
 
 Built with React JS.
 
+## Live Demo
+
+(olaoluwanis-paystck-coding-test.netlify.com)[https://olaoluwanis-paystck-coding-test.netlify.com]
+
 ## Install
 
 ### `npm install`
@@ -21,3 +25,7 @@ Open http://localhost:3000
 ## Data 
 
 [Swapi](https://swapi.co/api/films)
+
+## Deployment Server
+
+[Netlify](https://www.netlify.com/
