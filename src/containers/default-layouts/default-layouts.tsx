@@ -17,9 +17,7 @@ export default function DefaultLayout() {
     <Layout className="bg-black-light">
       <Suspense fallback={loadingUI()}>
         <Header />
-      </Suspense>
-      <Content className="content-container">
-        <Suspense fallback={loadingUI()}>
+        <Content className="content-container">
           {!isOnline ? (
             <section className="bg-yellow text-center p-3 font-bold uppercase">
               Your internet connection is offline!
@@ -38,8 +36,8 @@ export default function DefaultLayout() {
               ) : null;
             })}
           </Switch>
-        </Suspense>
-      </Content>
+        </Content>
+      </Suspense>
     </Layout>
   );
 }
