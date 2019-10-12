@@ -5,7 +5,7 @@ const Films = lazy(() => import("../../components/films"));
 
 function Home(props) {
   return (
-    <div className="w-full min-h-full flex justify-center">
+    <div className="w-full h-screen flex justify-center">
       <Suspense fallback={loadingUI()}>
         <Films />
       </Suspense>

@@ -38,7 +38,7 @@ h5 {
 }
 
 .content-container {
-  @apply h-screen pt-20 pl-10 pr-10 pb-20;
+  @apply pt-20 pl-10 pr-10 pb-20;
 }
 
 .movie-info {
@@ -57,7 +57,7 @@ h5 {
   @apply flex justify-between;
 
   .table-header-section-2 {
-    @apply flex justify-end
+    @apply flex justify-end;
 
     div {
       width: 150px;
@@ -65,12 +65,44 @@ h5 {
   }
 }
 
-.ant-table-thead {
-  tr {
-    th {
-      background: $black !important;
-    }
+.ant-table-thead > tr > th {
+  @apply bg-light-grey text-black border-yellow;
+
+  .ant-table-column-sorter .ant-table-column-sorter-inner {
+    @apply text-black;
   }
+
+  .anticon-filter,
+  .ant-table-thead > tr > th .ant-table-filter-icon {
+    @apply text-black;
+  }
+
+  .ant-table-filter-selected.anticon-filter {
+    @apply text-yellow;
+  }
+}
+
+.ant-table-tbody > tr {
+  @apply bg-black;
+
+  td {
+    @apply border-yellow;
+  }
+}
+
+.ant-table-row {
+  :hover {
+    @apply bg-black;
+  }
+}
+
+.ant-table-footer {
+  @apply bg-light-grey text-black;
+  border-top: 1px solid #ffe35d;
+}
+
+.ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
+    @apply border-yellow;
 }
 
 @screen sm {

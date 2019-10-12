@@ -588,6 +588,8 @@ video {
 
 @import "~antd/dist/antd.css";
 
+$black: #0d0703;
+
 html,
 body {
   background-color: #222222;
@@ -623,7 +625,6 @@ h5 {
 }
 
 .content-container {
-  height: 100vh;
   padding-top: 5rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -652,8 +653,53 @@ h5 {
 
 .table-header .table-header-section-2 {
     display: flex;
-    justify-content: flex-end
+    justify-content: flex-end;
   }
+
+.table-header .table-header-section-2 div {
+      width: 150px;
+    }
+
+.ant-table-thead > tr > th {
+  background-color: #B2AAA4;
+  color: #0D0703;
+  border-color: #FFE35D;
+}
+
+.ant-table-thead > tr > th .ant-table-column-sorter .ant-table-column-sorter-inner {
+    color: #0D0703;
+  }
+
+.ant-table-thead > tr > th .anticon-filter,
+  .ant-table-thead > tr > th .ant-table-thead > tr > th .ant-table-filter-icon {
+    color: #0D0703;
+  }
+
+.ant-table-thead > tr > th .ant-table-filter-selected.anticon-filter {
+    color: #FFE35D;
+  }
+
+.ant-table-tbody > tr {
+  background-color: #0D0703;
+}
+
+.ant-table-tbody > tr td {
+    border-color: #FFE35D;
+  }
+
+.ant-table-row :hover {
+    background-color: #0D0703;
+  }
+
+.ant-table-footer {
+  background-color: #B2AAA4;
+  color: #0D0703;
+  border-top: 1px solid #ffe35d;
+}
+
+.ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
+  border-color: #FFE35D;
+}
 
 @media (max-width: 639px) {
   .movie-info {
@@ -669,6 +715,13 @@ h5 {
     padding-right: 0;
     padding-bottom: 5rem;
   }
+    .table-header .table-header-section-2 {
+      display: flex;
+      justify-content: space-between;
+    }
+      .table-header .table-header-section-2 div {
+        margin: auto;
+      }
 }
 
 .opening-crawl-container {
