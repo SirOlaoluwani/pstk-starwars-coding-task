@@ -588,7 +588,10 @@ video {
 
 @import "~antd/dist/antd.css";
 
-$black: #0d0703;
+::selection {
+  background-color: #FFE35D;
+  color: #0D0703;
+}
 
 html,
 body {
@@ -687,20 +690,9 @@ h5 {
     border-color: #FFE35D;
   }
 
-:global(.ant-table-row) :hover {
+.ant-table-tbody tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
     background-color: #0D0703;
   }
-
-.ant-table-tbody > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
-  background-color: #0D0703;
-}
-
-/* 
-.ant-table-row {
-  :hover {
-    @apply bg-black;
-  }
-} */
 
 .ant-table-footer {
   background-color: #B2AAA4;

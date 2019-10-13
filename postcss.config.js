@@ -7,6 +7,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
     "./src/**/*.ts",
   ],
   css: ['./src/assets/css/style.tailwind.compiled.css'],
+  whitelist: ['ant-table-tbody'],
   // Include any special characters you're using in this regular expression
   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
 });

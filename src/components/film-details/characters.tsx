@@ -124,7 +124,6 @@ export default function Characters(props) {
         dataSource={people}
         columns={columns}
         loading={loading}
-        rowClassName={() => "hover:text-black"}
         rowKey={record => lastUrlSegment(record.url)}
         footer={TableFooter}
       />

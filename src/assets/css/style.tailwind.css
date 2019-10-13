@@ -3,7 +3,9 @@
 
 @import "~antd/dist/antd.css";
 
-$black: #0d0703;
+::selection {
+  @apply bg-yellow text-black;
+}
 
 html,
 body {
@@ -90,21 +92,11 @@ h5 {
   }
 }
 
-:global(.ant-table-row) {
-  :hover {
+.ant-table-tbody {
+  tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
     @apply bg-black;
   }
 }
-
-.ant-table-tbody > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
-    @apply bg-black;
-}
-/* 
-.ant-table-row {
-  :hover {
-    @apply bg-black;
-  }
-} */
 
 .ant-table-footer {
   @apply bg-light-grey text-black;
@@ -112,7 +104,7 @@ h5 {
 }
 
 .ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
-    @apply border-yellow;
+  @apply border-yellow;
 }
 
 @screen sm {

@@ -24,7 +24,7 @@
     "build:style": "postcss src/assets/css/style.tailwind.css -o src/assets/css/style.tailwind.compiled.css",
     "watch:style": "postcss src/assets/css/style.tailwind.css -o src/assets/css/style.tailwind.compiled.css --watch",
     "start": "npm run build:style && react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run build:style && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
