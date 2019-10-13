@@ -90,11 +90,21 @@ h5 {
   }
 }
 
-.ant-table-row {
+:global(.ant-table-row) {
   :hover {
     @apply bg-black;
   }
 }
+
+.ant-table-tbody > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
+    @apply bg-black;
+}
+/* 
+.ant-table-row {
+  :hover {
+    @apply bg-black;
+  }
+} */
 
 .ant-table-footer {
   @apply bg-light-grey text-black;

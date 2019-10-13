@@ -14,9 +14,16 @@ function Films(props) {
       setLoading(true);
       let res = await new FilmController().getFilms();
       setLoading(false);
-      if (res && res.data) setFilms(res.data.results);
+      
+      if (res && res.data)
+        setFilms(
+          res.data.results.sort((a, b) => {
+            return +new Date(a.release_date) - +new Date(b.release_date);
+          })
+        );
     };
     fetchData();
+    
   }, []);
 
   const handleChange = value => {
@@ -26,20 +33,20 @@ function Films(props) {
 
   return (
     <div className="m-auto w-1/2">
-        <h2>Select Starwars Episode</h2>
-        <Select
-          isLoading={loading}
-          value={selected}
-          onChange={handleChange}
-          options={
-            films
-              ? films.map((film, index) => {
-                  return { value: film.url, label: film.title, id: index };
-                })
-              : []
-          }
-        />
-      </div>
+      <h2>Select Starwars Episode</h2>
+      <Select
+        isLoading={loading}
+        value={selected}
+        onChange={handleChange}
+        options={
+          films
+            ? films.map((film, index) => {
+                return { value: film.url, label: film.title, id: index };
+              })
+            : []
+        }
+      />
+    </div>
   );
 }
 

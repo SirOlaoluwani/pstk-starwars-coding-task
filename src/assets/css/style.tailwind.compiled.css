@@ -687,9 +687,20 @@ h5 {
     border-color: #FFE35D;
   }
 
-.ant-table-row :hover {
+:global(.ant-table-row) :hover {
     background-color: #0D0703;
   }
+
+.ant-table-tbody > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
+  background-color: #0D0703;
+}
+
+/* 
+.ant-table-row {
+  :hover {
+    @apply bg-black;
+  }
+} */
 
 .ant-table-footer {
   background-color: #B2AAA4;
