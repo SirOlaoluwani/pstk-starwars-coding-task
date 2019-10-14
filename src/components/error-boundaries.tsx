@@ -1,7 +1,7 @@
 import React from "react";
 
 interface ErrorBoundaryState {
-  error?: any;
+  error?: Error | null;
   errorInfo?: any;
 }
 
@@ -14,7 +14,7 @@ export default class ErrorBoundary extends React.Component<
     this.state = { error: null, errorInfo: null };
   }
 
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error: Error | null, errorInfo: object) {
     this.setState({
       error: error,
       errorInfo: errorInfo
