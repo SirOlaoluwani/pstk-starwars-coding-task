@@ -9,6 +9,7 @@ export default class ErrorBoundary extends React.Component<
   {},
   ErrorBoundaryState
 > {
+  
   constructor(props) {
     super(props);
     this.state = { error: null, errorInfo: null };
